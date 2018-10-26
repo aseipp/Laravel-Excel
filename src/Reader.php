@@ -92,6 +92,7 @@ class Reader
             $sheet->disconnect();
         }
 
+        $this->afterReading($import);
         $this->garbageCollect();
 
         return $this;
@@ -121,6 +122,7 @@ class Reader
             $sheet->disconnect();
         }
 
+        $this->afterReading($import);
         $this->garbageCollect();
 
         return $sheets;
